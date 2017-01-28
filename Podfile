@@ -1,2 +1,4 @@
-use_frameworks!
-pod 'NVActivityIndicatorView'
+target "DevSilo" do
+	use_frameworks!
+	pod 'NVActivityIndicatorView'
+end
