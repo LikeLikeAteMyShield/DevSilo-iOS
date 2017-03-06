@@ -9,7 +9,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class ViewController: UIViewController, SearchEngineDelegate, UISearchBarDelegate {
+class SearchViewController: UIViewController, SearchEngineDelegate, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     var loadingIndicator: NVActivityIndicatorView?
@@ -17,15 +17,14 @@ class ViewController: UIViewController, SearchEngineDelegate, UISearchBarDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-        
     }
     
     func didCompleteSearch(result: ([Video],[ExternalVideo])) {
         DispatchQueue.main.async {
+            SearchResult.sharedInstance.setResult(result: result)
             self.searchBar.isUserInteractionEnabled = true
             self.loadingIndicator?.stopAnimating()
             self.performSegue(withIdentifier: "ShowSearchResults", sender: self)
-            print(result)
         }
     }
 
@@ -37,12 +36,15 @@ class ViewController: UIViewController, SearchEngineDelegate, UISearchBarDelegat
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         searchBar.isUserInteractionEnabled = false
+        
         let engine = SearchEngine(delegate: self)
         engine.performSearch(searchPhrase: searchBar.text!)
+        
         let centrePoint = CGPoint(x: self.view.frame.width/2-150, y: self.view.frame.height/2-100)
         let size = CGSize(width: 300, height: 300)
         let rect = CGRect(origin: centrePoint, size: size)
-        loadingIndicator = NVActivityIndicatorView(frame: rect, type: NVActivityIndicatorType.ballClipRotatePulse, color: UIColor.orange, padding: NVActivityIndicatorView.DEFAULT_PADDING)
+        
+        loadingIndicator = NVActivityIndicatorView(frame: rect, type: NVActivityIndicatorType.ballClipRotateMultiple, color: UIColor.init(colorLiteralRed: 102/255, green: 204/255, blue: 255/255, alpha: 1) , padding: NVActivityIndicatorView.DEFAULT_PADDING)
         self.view.addSubview(self.loadingIndicator!)
         self.loadingIndicator?.startAnimating()
     }

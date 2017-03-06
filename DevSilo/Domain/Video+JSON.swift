@@ -13,14 +13,15 @@ extension Video {
     convenience init?(json: [String:Any]) {
         guard let id = json["id"] as? [String:Int64],
             let idValue = id["value"],
-            let title = json["title"] as? String
+            let title = json["title"] as? String,
+            let thumbnailData = json["thumbnailData"] as? String
         else {
             return nil
         }
         
         do {
             let trusted_id = try Id(untrusted_id: idValue)
-            self.init(id: trusted_id!, title: title)
+            self.init(id: trusted_id!, title: title, thumbnailData: thumbnailData)
         } catch {
             return nil
         }

@@ -21,7 +21,9 @@ class SearchEngine {
         var devsSiloVideos = [Video]()
         var externalVideos = [ExternalVideo]()
         
-        let url = URL(string: Constants.BASE_URL + "search?searchPhrase=\(searchPhrase)")
+        let sanitizedString = searchPhrase.replacingOccurrences(of: " ", with: "+")
+        
+        let url = URL(string: Constants.BASE_URL + "search?searchPhrase=\(sanitizedString)")
         let session = URLSession.shared
         
         let task = session.dataTask(with: url!) { data, response, error in

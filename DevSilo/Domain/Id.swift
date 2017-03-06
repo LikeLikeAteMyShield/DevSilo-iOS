@@ -19,4 +19,8 @@ class Id {
             return nil
         }
     }
+    
+    public func getValue() -> Int64 {
+        return value
+    }
 }

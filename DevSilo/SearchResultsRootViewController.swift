@@ -15,17 +15,15 @@ class SearchResultsRootViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        //Initially load the recent searches view
-        /*
-        self.currentViewController = self.storyboard?.instantiateViewController(withIdentifier: "RecentSearchesTable")
+        self.currentViewController = self.storyboard?.instantiateViewController(withIdentifier: "DevSiloResults")
         self.currentViewController!.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChildViewController(self.currentViewController!)
         self.addSubview(subView: self.currentViewController!.view, toView: self.containerView)
-        */
+        
         super.viewDidLoad()
     }
     
-    /*func addSubview(subView:UIView, toView parentView:UIView) {
+    func addSubview(subView:UIView, toView parentView:UIView) {
         parentView.addSubview(subView)
         
         var viewBindingsDict = [String: AnyObject]()
@@ -46,12 +44,12 @@ class SearchResultsRootViewController: UIViewController {
         //Show searches or routes based on user selection
         
         if sender.selectedSegmentIndex == 0 {
-            let newViewController = self.storyboard?.instantiateViewController(withIdentifier: "RecentSearchesTable")
+            let newViewController = self.storyboard?.instantiateViewController(withIdentifier: "DevSiloResults")
             newViewController!.view.translatesAutoresizingMaskIntoConstraints = false
             self.cycleFromViewController(oldViewController: self.currentViewController!, toViewController: newViewController!)
             self.currentViewController = newViewController
         } else if sender.selectedSegmentIndex == 1 {
-            let newViewController = self.storyboard?.instantiateViewController(withIdentifier: "PreviousRoutesTable")
+            let newViewController = self.storyboard?.instantiateViewController(withIdentifier: "OtherResults")
             newViewController!.view.translatesAutoresizingMaskIntoConstraints = false
             self.cycleFromViewController(oldViewController: self.currentViewController!, toViewController: newViewController!)
             self.currentViewController = newViewController
@@ -74,6 +72,6 @@ class SearchResultsRootViewController: UIViewController {
                                     oldViewController.removeFromParentViewController()
                                     newViewController.didMove(toParentViewController: self)
         })
-    }*/
+    }
 
 }

@@ -8,18 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		70D5E94BD6493CFE2EA025C4 /* Pods_DevSilo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D37CC3251A85B36A20154B /* Pods_DevSilo.framework */; };
+		FB266C7D1E6A1D4B0002B7C3 /* RegisterUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB266C7C1E6A1D4B0002B7C3 /* RegisterUser.storyboard */; };
+		FB266C7F1E6A20620002B7C3 /* RegistrationFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB266C7E1E6A20620002B7C3 /* RegistrationFormViewController.swift */; };
+		FB266C821E6A378D0002B7C3 /* RegistrationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB266C811E6A378D0002B7C3 /* RegistrationEngine.swift */; };
+		FB266C841E6A37CF0002B7C3 /* RegistrationEngineDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB266C831E6A37CF0002B7C3 /* RegistrationEngineDelegate.swift */; };
 		FB4E23441E3BEE7500745323 /* SearchResultsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4E23431E3BEE7500745323 /* SearchResultsRootViewController.swift */; };
+		FB4E23461E3CCDC900745323 /* DevSiloSearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4E23451E3CCDC900745323 /* DevSiloSearchResultsTableViewController.swift */; };
+		FB4E23481E3CD0BE00745323 /* DevSiloSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4E23471E3CD0BE00745323 /* DevSiloSearchResultTableViewCell.swift */; };
 		FB8BBA511E3941DC00AF9E2E /* SearchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8BBA501E3941DC00AF9E2E /* SearchEngine.swift */; };
 		FB8BBA531E39476A00AF9E2E /* Video+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8BBA521E39476A00AF9E2E /* Video+JSON.swift */; };
 		FB8BBA551E3949F300AF9E2E /* ExternalVideo+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8BBA541E3949F300AF9E2E /* ExternalVideo+JSON.swift */; };
 		FB8BBA571E3957C300AF9E2E /* SearchEngineDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8BBA561E3957C300AF9E2E /* SearchEngineDelegate.swift */; };
 		FB925EC11E33AC9300802B15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB925EC01E33AC9300802B15 /* AppDelegate.swift */; };
-		FB925EC31E33AC9300802B15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB925EC21E33AC9300802B15 /* ViewController.swift */; };
+		FB925EC31E33AC9300802B15 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB925EC21E33AC9300802B15 /* SearchViewController.swift */; };
 		FB925EC61E33AC9300802B15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB925EC41E33AC9300802B15 /* Main.storyboard */; };
 		FB925EC81E33AC9300802B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB925EC71E33AC9300802B15 /* Assets.xcassets */; };
 		FB925ECB1E33AC9300802B15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB925EC91E33AC9300802B15 /* LaunchScreen.storyboard */; };
 		FB925ED61E33AC9300802B15 /* DevSiloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB925ED51E33AC9300802B15 /* DevSiloTests.swift */; };
-		FB925EE21E33B1A300802B15 /* ServiceEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB925EE11E33B1A300802B15 /* ServiceEngine.swift */; };
 		FB925EE51E33B6B800802B15 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB925EE41E33B6B800802B15 /* Video.swift */; };
 		FB925EE61E33B6B800802B15 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB925EE41E33B6B800802B15 /* Video.swift */; };
 		FB925EE81E33D00500802B15 /* VideoSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB925EE71E33D00500802B15 /* VideoSource.swift */; };
@@ -30,6 +35,9 @@
 		FB925EEF1E33D54200802B15 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB925EED1E33D54200802B15 /* Id.swift */; };
 		FB925EF11E33D8DC00802B15 /* ExternalVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB925EF01E33D8DC00802B15 /* ExternalVideo.swift */; };
 		FB925EF21E33D8DC00802B15 /* ExternalVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB925EF01E33D8DC00802B15 /* ExternalVideo.swift */; };
+		FBE959601E3CF01800A93E3D /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9595F1E3CF01800A93E3D /* SearchResult.swift */; };
+		FBE959621E3CFC5700A93E3D /* OtherSearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE959611E3CFC5700A93E3D /* OtherSearchResultsTableViewController.swift */; };
+		FBE959641E3D040600A93E3D /* OtherSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE959631E3D040600A93E3D /* OtherSearchResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,14 +54,20 @@
 		0D77A32E00E59E6C8F9A8C6B /* Pods-DevSilo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevSilo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DevSilo/Pods-DevSilo.release.xcconfig"; sourceTree = "<group>"; };
 		32D37CC3251A85B36A20154B /* Pods_DevSilo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevSilo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48C60C1937B51A3DC1535FD /* Pods-DevSilo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevSilo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevSilo/Pods-DevSilo.debug.xcconfig"; sourceTree = "<group>"; };
+		FB266C7C1E6A1D4B0002B7C3 /* RegisterUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterUser.storyboard; sourceTree = "<group>"; };
+		FB266C7E1E6A20620002B7C3 /* RegistrationFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationFormViewController.swift; sourceTree = "<group>"; };
+		FB266C811E6A378D0002B7C3 /* RegistrationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationEngine.swift; sourceTree = "<group>"; };
+		FB266C831E6A37CF0002B7C3 /* RegistrationEngineDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationEngineDelegate.swift; sourceTree = "<group>"; };
 		FB4E23431E3BEE7500745323 /* SearchResultsRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsRootViewController.swift; sourceTree = "<group>"; };
+		FB4E23451E3CCDC900745323 /* DevSiloSearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DevSiloSearchResultsTableViewController.swift; path = Search/DevSiloSearchResultsTableViewController.swift; sourceTree = "<group>"; };
+		FB4E23471E3CD0BE00745323 /* DevSiloSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DevSiloSearchResultTableViewCell.swift; path = Search/DevSiloSearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		FB8BBA501E3941DC00AF9E2E /* SearchEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchEngine.swift; path = Search/SearchEngine.swift; sourceTree = "<group>"; };
 		FB8BBA521E39476A00AF9E2E /* Video+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Video+JSON.swift"; path = "Domain/Video+JSON.swift"; sourceTree = "<group>"; };
 		FB8BBA541E3949F300AF9E2E /* ExternalVideo+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ExternalVideo+JSON.swift"; path = "Domain/ExternalVideo+JSON.swift"; sourceTree = "<group>"; };
 		FB8BBA561E3957C300AF9E2E /* SearchEngineDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchEngineDelegate.swift; path = Search/SearchEngineDelegate.swift; sourceTree = "<group>"; };
 		FB925EBD1E33AC9300802B15 /* DevSilo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevSilo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB925EC01E33AC9300802B15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB925EC21E33AC9300802B15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB925EC21E33AC9300802B15 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FB925EC51E33AC9300802B15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB925EC71E33AC9300802B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB925ECA1E33AC9300802B15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,12 +75,14 @@
 		FB925ED11E33AC9300802B15 /* DevSiloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevSiloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB925ED51E33AC9300802B15 /* DevSiloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevSiloTests.swift; sourceTree = "<group>"; };
 		FB925ED71E33AC9300802B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB925EE11E33B1A300802B15 /* ServiceEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceEngine.swift; path = WebApiClient/ServiceEngine.swift; sourceTree = "<group>"; };
 		FB925EE41E33B6B800802B15 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Video.swift; path = Domain/Video.swift; sourceTree = "<group>"; };
 		FB925EE71E33D00500802B15 /* VideoSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoSource.swift; path = Domain/VideoSource.swift; sourceTree = "<group>"; };
 		FB925EEA1E33D27E00802B15 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FB925EED1E33D54200802B15 /* Id.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Id.swift; path = Domain/Id.swift; sourceTree = "<group>"; };
 		FB925EF01E33D8DC00802B15 /* ExternalVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExternalVideo.swift; path = Domain/ExternalVideo.swift; sourceTree = "<group>"; };
+		FBE9595F1E3CF01800A93E3D /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResult.swift; path = Search/SearchResult.swift; sourceTree = "<group>"; };
+		FBE959611E3CFC5700A93E3D /* OtherSearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OtherSearchResultsTableViewController.swift; path = Search/OtherSearchResultsTableViewController.swift; sourceTree = "<group>"; };
+		FBE959631E3D040600A93E3D /* OtherSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OtherSearchResultTableViewCell.swift; path = Search/OtherSearchResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +113,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FB266C801E6A36200002B7C3 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				FB266C7C1E6A1D4B0002B7C3 /* RegisterUser.storyboard */,
+				FB266C7E1E6A20620002B7C3 /* RegistrationFormViewController.swift */,
+				FB266C811E6A378D0002B7C3 /* RegistrationEngine.swift */,
+				FB266C831E6A37CF0002B7C3 /* RegistrationEngineDelegate.swift */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
 		FB8BBA4F1E3941A500AF9E2E /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				FB925EC21E33AC9300802B15 /* SearchViewController.swift */,
 				FB8BBA501E3941DC00AF9E2E /* SearchEngine.swift */,
 				FB8BBA561E3957C300AF9E2E /* SearchEngineDelegate.swift */,
+				FB4E23451E3CCDC900745323 /* DevSiloSearchResultsTableViewController.swift */,
+				FB4E23431E3BEE7500745323 /* SearchResultsRootViewController.swift */,
+				FB4E23471E3CD0BE00745323 /* DevSiloSearchResultTableViewCell.swift */,
+				FBE9595F1E3CF01800A93E3D /* SearchResult.swift */,
+				FBE959611E3CFC5700A93E3D /* OtherSearchResultsTableViewController.swift */,
+				FBE959631E3D040600A93E3D /* OtherSearchResultTableViewCell.swift */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -129,17 +163,15 @@
 		FB925EBF1E33AC9300802B15 /* DevSilo */ = {
 			isa = PBXGroup;
 			children = (
+				FB266C801E6A36200002B7C3 /* Register */,
 				FB8BBA4F1E3941A500AF9E2E /* Search */,
 				FB925EE31E33B68A00802B15 /* Domain */,
-				FB925EE01E33ADBB00802B15 /* WebApiClient */,
 				FB925EC01E33AC9300802B15 /* AppDelegate.swift */,
-				FB925EC21E33AC9300802B15 /* ViewController.swift */,
 				FB925EC41E33AC9300802B15 /* Main.storyboard */,
 				FB925EC71E33AC9300802B15 /* Assets.xcassets */,
 				FB925EC91E33AC9300802B15 /* LaunchScreen.storyboard */,
 				FB925ECC1E33AC9300802B15 /* Info.plist */,
 				FB925EEA1E33D27E00802B15 /* Constants.swift */,
-				FB4E23431E3BEE7500745323 /* SearchResultsRootViewController.swift */,
 			);
 			path = DevSilo;
 			sourceTree = "<group>";
@@ -151,14 +183,6 @@
 				FB925ED71E33AC9300802B15 /* Info.plist */,
 			);
 			path = DevSiloTests;
-			sourceTree = "<group>";
-		};
-		FB925EE01E33ADBB00802B15 /* WebApiClient */ = {
-			isa = PBXGroup;
-			children = (
-				FB925EE11E33B1A300802B15 /* ServiceEngine.swift */,
-			);
-			name = WebApiClient;
 			sourceTree = "<group>";
 		};
 		FB925EE31E33B68A00802B15 /* Domain */ = {
@@ -272,6 +296,7 @@
 			files = (
 				FB925ECB1E33AC9300802B15 /* LaunchScreen.storyboard in Resources */,
 				FB925EC81E33AC9300802B15 /* Assets.xcassets in Resources */,
+				FB266C7D1E6A1D4B0002B7C3 /* RegisterUser.storyboard in Resources */,
 				FB925EC61E33AC9300802B15 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,16 +364,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB925EF11E33D8DC00802B15 /* ExternalVideo.swift in Sources */,
-				FB925EC31E33AC9300802B15 /* ViewController.swift in Sources */,
+				FB925EC31E33AC9300802B15 /* SearchViewController.swift in Sources */,
+				FBE959601E3CF01800A93E3D /* SearchResult.swift in Sources */,
 				FB925EE51E33B6B800802B15 /* Video.swift in Sources */,
 				FB4E23441E3BEE7500745323 /* SearchResultsRootViewController.swift in Sources */,
 				FB8BBA531E39476A00AF9E2E /* Video+JSON.swift in Sources */,
-				FB925EE21E33B1A300802B15 /* ServiceEngine.swift in Sources */,
+				FBE959621E3CFC5700A93E3D /* OtherSearchResultsTableViewController.swift in Sources */,
+				FB266C7F1E6A20620002B7C3 /* RegistrationFormViewController.swift in Sources */,
 				FB925EE81E33D00500802B15 /* VideoSource.swift in Sources */,
+				FB4E23481E3CD0BE00745323 /* DevSiloSearchResultTableViewCell.swift in Sources */,
+				FB266C821E6A378D0002B7C3 /* RegistrationEngine.swift in Sources */,
 				FB8BBA551E3949F300AF9E2E /* ExternalVideo+JSON.swift in Sources */,
 				FB925EC11E33AC9300802B15 /* AppDelegate.swift in Sources */,
+				FB4E23461E3CCDC900745323 /* DevSiloSearchResultsTableViewController.swift in Sources */,
+				FB266C841E6A37CF0002B7C3 /* RegistrationEngineDelegate.swift in Sources */,
 				FB8BBA571E3957C300AF9E2E /* SearchEngineDelegate.swift in Sources */,
 				FB8BBA511E3941DC00AF9E2E /* SearchEngine.swift in Sources */,
+				FBE959641E3D040600A93E3D /* OtherSearchResultTableViewCell.swift in Sources */,
 				FB925EEE1E33D54200802B15 /* Id.swift in Sources */,
 				FB925EEB1E33D27E00802B15 /* Constants.swift in Sources */,
 			);
@@ -502,6 +534,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonnyc.DevSilo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -517,6 +550,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonnyc.DevSilo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
