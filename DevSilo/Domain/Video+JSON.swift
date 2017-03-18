@@ -14,6 +14,7 @@ extension Video {
         guard let id = json["id"] as? [String:Int64],
             let idValue = id["value"],
             let title = json["title"] as? String,
+            let author = json["author"] as? String,
             let thumbnailData = json["thumbnailData"] as? String
         else {
             return nil
@@ -21,7 +22,7 @@ extension Video {
         
         do {
             let trusted_id = try Id(untrusted_id: idValue)
-            self.init(id: trusted_id!, title: title, thumbnailData: thumbnailData)
+            self.init(id: trusted_id!, title: title, author: author, thumbnailData: thumbnailData)
         } catch {
             return nil
         }

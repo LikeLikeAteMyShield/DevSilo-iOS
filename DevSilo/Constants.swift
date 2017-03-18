@@ -10,4 +10,6 @@ import Foundation
 
 struct Constants {
     static let BASE_URL = "http://ec2-54-244-108-26.us-west-2.compute.amazonaws.com:8090/"
+    static let BOUNDARY_IDENTIFIER = "----1234"
+
 }

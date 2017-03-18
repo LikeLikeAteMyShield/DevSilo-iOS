@@ -46,6 +46,7 @@ class DevSiloSearchResultsTableViewController: UITableViewController {
 
         let video = videos?[indexPath.row]
         cell?.titleLabel.text = video?.title
+        cell?.authorLabel.text = video?.author
         
         let data = Data(base64Encoded: (video?.thumbnailData)!)
         let thumbnail = UIImage(data: data!)
@@ -60,21 +61,9 @@ class DevSiloSearchResultsTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let destinationVC = segue.destination as! AVPlayerViewController
-        
         let indexPath = tableView.indexPathForSelectedRow
         let video = videos?[(indexPath?.row)!]
-        
-        let videoId = video?.id
-        let url = URL(string: Constants.BASE_URL + "videos/\(videoId!.getValue())")
-        
-        if let videoURL = url {
-            
-            destinationVC.player = AVPlayer(url: videoURL)
-            destinationVC.player?.play()
-            destinationVC.updatesNowPlayingInfoCenter = true
-            destinationVC.allowsPictureInPicturePlayback = true
-        }
+        VideoContext.sharedInstance.setCurrentVideo(video: video!)
     }
 
 }
